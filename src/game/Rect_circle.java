@@ -1,6 +1,7 @@
 package game;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class Rect_circle extends PApplet{
 
@@ -13,20 +14,26 @@ public class Rect_circle extends PApplet{
     rectL r1;
     circleL c1;
     circleL c2;
+    PImage ball, arco;
     @Override
     public void setup() {
-
+        ball = loadImage("src/images/ball.png");
+        arco = loadImage("src/images/arco.png");
+        ball.resize(60,60);
+        arco.resize(165,90);
     }
 
     @Override
     public void draw() {
         background(0,0,0);
         r1 = new rectL(168,205,165,90);
-        c1 = new circleL(mouseX,mouseY,50);
+        c1 = new circleL(mouseX,mouseY,65);
         c2 = new circleL(c1.x,c1.y,5);
         r1.display();
+        image(arco,168,205);
         c1.display();
         c2.display();
+        image(ball, mouseX-30, mouseY-30);
 
         
         if(c2.x < r1.x){

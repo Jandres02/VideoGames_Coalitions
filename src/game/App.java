@@ -6,8 +6,9 @@ public class App {
         Rect_rect rr = new Rect_rect();
         Circle_circle cc = new Circle_circle();
         Rect_circle rc = new Rect_circle();
+        //discomment the sample that you need to run
         // rr.run();
-        cc.run();
+        // cc.run();
         // rc.run();
     }
 }

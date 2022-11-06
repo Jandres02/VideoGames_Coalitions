@@ -21,7 +21,7 @@ public class Rect_rect extends PApplet{
     
     @Override
     public void draw() {    
-        background(30,27,32);
+        background(0,0,0);
         r2 = new rectL(168,205,165,90);
         r1 = new rectL(mouseX,mouseY,135,60);
         casa = loadImage("src/images/casa.png");
@@ -35,17 +35,13 @@ public class Rect_rect extends PApplet{
         
         if(r1.x > r2.x+r2.w || r1.x+r1.w < r2.x || r1.y > r2.y+r2.h || r1.y+r1.h < r2.y){
             noFill();
-            stroke(255,255,255);
-            strokeWeight(5);
+            stroke(74,223,14);
         } else {
             fill(223,14,14);
-            stroke(255,255,255);
-            strokeWeight(5);
+            stroke(74,223,14);
             textSize(20);
             text("COLLISION!", 200, 415);
-
         }
-
     }
 
     class rectL {
